@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OceanicNext — Marketing Portfolio</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/> 
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- Mobile Menu -->
+<!-- <div class="mobile-menu" id="mobileMenu">
+  <a href="#about"    onclick="closeMobile()" data-en="About"    data-ru="Обо мне">About</a>
+  <a href="#services" onclick="closeMobile()" data-en="Services" data-ru="Услуги">Services</a>
+  <a href="#projects" onclick="closeMobile()" data-en="Projects" data-ru="Проекты">Projects</a>
+  <a href="#contact"  onclick="closeMobile()" data-en="Contact"  data-ru="Контакт">Contact</a>
+</div> -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobile()">✕</button>
+  <nav class="mobile-nav">
+    <a href="#about"    onclick="closeMobile()" data-en="About"    data-ru="Обо мне">About</a>
+    <a href="#services" onclick="closeMobile()" data-en="Services" data-ru="Услуги">Services</a>
+    <a href="#projects" onclick="closeMobile()" data-en="Projects" data-ru="Проекты">Projects</a>
+    <a href="#results"  onclick="closeMobile()" data-en="Results"  data-ru="Результаты">Results</a>
+    <a href="#contact"  onclick="closeMobile()" data-en="Contact"  data-ru="Контакт">Contact</a>
+  </nav>
+  <a href="#contact" class="mobile-menu-cta" onclick="closeMobile()" data-en="Let's Talk" data-ru="Связаться">Let's Talk</a>
+</div>
+<!-- ═══════════ HEADER ═══════════ -->
+<header id="mainHeader">
+  <div class="container">
+    <nav>
+      <a href="#" class="logo">
+   <div class="logo-icon">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+    <!-- Хвост акулы — две лопасти -->
+    <path d="M20 16 L4 6 L12 16 L4 26 Z" fill="white" opacity="0.95"/>
+    <!-- Тело уходящее вправо -->
+    <path d="M12 16 Q18 13 28 14 Q30 16 28 18 Q18 19 12 16 Z" fill="white" opacity="0.85"/>
+    <!-- Разрез хвоста -->
+    <path d="M4 6 L12 16 L4 26" fill="none" stroke="rgba(0,200,232,0.6)" stroke-width="1" stroke-linecap="round"/>
+  </svg>
+</div>
+  <div class="logo-text">
+    OceanicNext
+    <span class="logo-sub">by Tamerlan Qarayev</span>
+  </div>
+</a>
+      <ul class="nav-links">
+        <li><a href="#about"    data-en="About"    data-ru="Обо мне">About</a></li>
+        <li><a href="#services" data-en="Services" data-ru="Услуги">Services</a></li>
+        <li><a href="#projects" data-en="Projects" data-ru="Проекты">Projects</a></li>
+        <li><a href="#results"  data-en="Results"  data-ru="Результаты">Results</a></li>
+        <li><a href="#contact"  data-en="Contact"  data-ru="Контакты">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang-toggle">
+          <button class="lang-btn active" onclick="setLang('en')">EN</button>
+          <button class="lang-btn"        onclick="setLang('ru')">RU</button>
+        </div>
+        <a href="#contact" class="cta-nav" data-en="Let's Talk" data-ru="Связаться">Let's Talk</a>
+        <div class="burger" id="burgerBtn" onclick="toggleMobile()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section id="hero">
+  <div id="sharkWrap" aria-hidden="true" style="position:absolute;top:60%;left:0;width:200px;opacity:0.55;pointer-events:none;z-index:2;">
+  <svg viewBox="0 0 260 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+    <!-- Хвост -->
+    <path d="M10 50 L0 28 L22 44 M10 50 L0 72 L22 56" fill="none" stroke="#0d5a70" stroke-width="3" stroke-linecap="round"/>
+    <!-- Тело — вытянутое как у акулы -->
+    <path d="M22 50 Q40 28 100 26 Q170 22 230 46 Q240 50 230 54 Q170 78 100 74 Q40 72 22 50 Z" fill="#0d5a70"/>
+    <!-- Брюхо светлее -->
+    <path d="M40 52 Q100 68 210 52 Q170 62 100 62 Q55 62 40 52 Z" fill="#0a7a8a" opacity="0.7"/>
+    <!-- Спинной плавник -->
+    <path d="M100 26 L115 4 L140 24" fill="#0b4d62" stroke="#0b4d62" stroke-linejoin="round"/>
+    <!-- Грудной плавник -->
+    <path d="M140 58 L165 80 L148 58 Z" fill="#0b4d62"/>
+    <!-- Хвостовой плавник нижний -->
+    <path d="M22 56 L8 75 L26 58 Z" fill="#0b4d62"/>
+    <!-- Нос -->
+    <path d="M228 46 Q252 48 255 50 Q252 52 228 54 Z" fill="#0d5a70"/>
+    <!-- Глаз -->
+    <circle cx="218" cy="45" r="5" fill="#00c8e8"/>
+    <circle cx="219" cy="45" r="2.5" fill="#001a22"/>
+    <circle cx="220" cy="44" r="1" fill="#fff" opacity="0.6"/>
+    <!-- Жаберные щели -->
+    <path d="M195 34 Q197 46 195 58" fill="none" stroke="#0a4055" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M186 33 Q188 46 186 59" fill="none" stroke="#0a4055" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+    <!-- Рот -->
+    <path d="M235 54 Q228 60 216 57" fill="none" stroke="#00c8e8" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  </svg>
+</div>
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="hero-handwrite" aria-hidden="true">
+  <span>Chaos</span>
+  <span>Can</span>
+  <span>Wait</span>
+</div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag" data-en="Digital Marketing Strategist" data-ru="Стратег цифрового маркетинга">Digital Marketing Strategist</span>
+      </div>
+      <h1 class="hero-title">
+        <span data-en="We don't just" data-ru="Мы не просто">We don't just</span><br>
+        <strong data-en="run campaigns." data-ru="запускаем кампании.">run campaigns.</strong>
+        <em data-en="We build growth." data-ru="Мы строим рост.">We build growth.</em>
+      </h1>
+      <p class="hero-desc"
+         data-en="20+ successful projects across multiple industries. From brand awareness to explosive sales growth — data-driven marketing that delivers real, measurable results."
+         data-ru="20+ успешных проектов в различных сферах. От узнаваемости бренда до взрывного роста продаж — маркетинг на основе данных, который приносит реальные, измеримые результаты.">
+        20+ successful projects across multiple industries. From brand awareness to explosive sales growth — data-driven marketing that delivers real, measurable results.
+      </p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary" data-en="View Projects" data-ru="Смотреть проекты">View Projects</a>
+        <a href="#contact"  class="btn-outline"  data-en="Get Free Audit" data-ru="Бесплатный аудит">Get Free Audit</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">20+</div>
+          <div class="stat-label" data-en="Projects Done" data-ru="Проектов">Projects Done</div>
+        </div>
+        <div>
+          <div class="stat-num">3×</div>
+          <div class="stat-label" data-en="Avg. Sales Growth" data-ru="Рост продаж">Avg. Sales Growth</div>
+        </div>
+        <div>
+          <div class="stat-num">Meta</div>
+          <div class="stat-label" data-en="Certified Ads" data-ru="Реклама">Certified Ads</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span data-en="Scroll" data-ru="Скролл">Scroll</span>
+  </div>
+</section>
+
+
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-img-wrap">
+          <img src="img/1.png" alt="Tamerlan" class="about-photo">
+          <!-- <div class="about-placeholder">🧑</div> -->
+        </div>
+        <div class="about-badge">
+          <div class="num">20+</div>
+          <div class="lab" data-en="Projects" data-ru="Проектов">Projects</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="tag reveal" data-en="About Me" data-ru="Обо мне">About Me</span>
+        <h2 class="section-title reveal reveal-delay-1">
+          <span data-en="Marketing that" data-ru="Маркетинг,">Marketing that</span><br>
+          <em data-en="moves the needle." data-ru="который работает.">moves the needle.</em>
+        </h2>
+        <p class="reveal reveal-delay-2"
+           data-en="I’m Tamerlan, a digital marketing strategist. I help businesses grow by turning data, strategy, and content into measurable results.
+I build marketing systems that increase leads, sales, brand awareness, and audience growth."
+           data-ru="Я — Тамерлан, стратег цифрового маркетинга. Помогаю бизнесу расти, превращая данные, стратегию и контент в измеримый результат.
+Создаю маркетинговые системы, которые увеличивают заявки, продажи, узнаваемость бренда и аудиторию.">
+          I’m Tamerlan, a digital marketing strategist. I help businesses grow by turning data, strategy, and content into measurable results.
+I build marketing systems that increase leads, sales, brand awareness, and audience growth.
+        </p>
+        <p class="reveal reveal-delay-3"
+           data-en="From hospitality brands to medical clinics, I've built campaigns that <strong>increase leads, boost sales, and grow audiences</strong>. Every business is unique — and every strategy is tailored to match."
+           data-ru="От гостиничных брендов до медицинских клиник — я создавал кампании, которые <strong>увеличивают заявки, продажи и аудиторию</strong>. Каждый бизнес уникален — каждая стратегия под него.">
+          From hospitality brands to medical clinics, I've built campaigns that <strong>increase leads, boost sales, and grow audiences</strong>. Every business is unique — and every strategy is tailored to match.
+        </p>
+        <div class="about-pills reveal reveal-delay-4">
+          <span class="pill" data-en="Meta Ads" data-ru="Реклама Meta">Meta Ads</span>
+          <span class="pill" data-en="Content Strategy" data-ru="Контент-стратегия">Content Strategy</span>
+          <span class="pill" data-en="Business Analytics" data-ru="Аналитика бизнеса">Business Analytics</span>
+          <span class="pill" data-en="Competitor Analysis" data-ru="Анализ Конкурентов">Competitor Analysis</span>
+          <span class="pill" data-en="Production" data-ru="Продакшн">Production</span>
+          <span class="pill" data-en="Viral Marketing" data-ru="Вирусный маркетинг">Viral Marketing</span>
+          <span class="pill" data-en="Brand Growth" data-ru="Рост бренда">Brand Growth</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SERVICES ═══════════ -->
+<section id="services">
+  <div class="container">
+    <div class="services-head">
+      <div>
+        <span class="tag reveal" data-en="What I Do" data-ru="Что я делаю">What I Do</span>
+        <h2 class="section-title reveal reveal-delay-1" style="margin-top:16px">
+          <span data-en="Services that" data-ru="Услуги,">Services that</span><br>
+          <em data-en="drive real growth." data-ru="которые дают рост.">drive real growth.</em>
+        </h2>
+      </div>
+      <p class="reveal reveal-delay-2" style="max-width:320px;color:var(--muted);font-size:.9rem"
+         data-en="Every service is designed with one goal — measurable business results. No fluff, just impact."
+         data-ru="Каждая услуга создана с одной целью — измеримые бизнес-результаты. Никакой воды, только результат.">
+        Every service is designed with one goal — measurable business results. No fluff, just impact.
+      </p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-icon">📊</div>
+        <div class="service-title" data-en="Business Analytics" data-ru="Аналитика бизнеса">Business Analytics</div>
+        <p class="service-desc"
+           data-en="Deep-dive audit of your business metrics, audience behaviour, and competitor landscape. We find the gaps and the opportunities — then build a plan."
+           data-ru="Глубокий аудит метрик бизнеса, поведения аудитории и конкурентной среды. Находим точки роста и возможности — затем выстраиваем план.">
+          Deep-dive audit of your business metrics, audience behaviour, and competitor landscape. We find the gaps and the opportunities — then build a plan.
+        </p>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-num">02</div>
+        <div class="service-icon">🎬</div>
+        <div class="service-title" data-en="Production" data-ru="Продакшн">Production</div>
+        <p class="service-desc"
+           data-en="High-quality photo and video production for social media, advertising, and brand identity. Content that stops the scroll and tells your story."
+           data-ru="Высококачественное фото и видеопроизводство для соцсетей, рекламы и айдентики бренда. Контент, который останавливает пролистывание.">
+          High-quality photo and video production for social media, advertising, and brand identity. Content that stops the scroll and tells your story.
+        </p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-num">03</div>
+        <div class="service-icon">🚀</div>
+        <div class="service-title" data-en="Viral Content Creation" data-ru="Создание вирусного контента">Viral Content Creation</div>
+        <p class="service-desc"
+           data-en="Strategic content built to spread. From trend-driven reels to platform-native campaigns — content that earns attention organically and amplifies your brand."
+           data-ru="Стратегический контент, созданный для распространения. От трендовых Reels до нативных кампаний — контент, который привлекает внимание органически.">
+          Strategic content built to spread. From trend-driven reels to platform-native campaigns — content that earns attention organically and amplifies your brand.
+        </p>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-num">04</div>
+        <div class="service-icon">🎯</div>
+        <div class="service-title" data-en="Meta Targeted Advertising" data-ru="Таргетированная реклама Meta">Meta Targeted Advertising</div>
+        <p class="service-desc"
+           data-en="Full-cycle setup and management of Facebook &amp; Instagram ad campaigns. Precise audience targeting, creative testing, and constant optimisation for maximum ROI."
+           data-ru="Полный цикл настройки и управления рекламными кампаниями в Facebook и Instagram. Точный таргетинг, тест-связки и постоянная оптимизация для максимального ROI.">
+          Full-cycle setup and management of Facebook &amp; Instagram ad campaigns. Precise audience targeting, creative testing, and constant optimisation for maximum ROI.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PROJECTS ═══════════ -->
+<section id="projects">
+  <div class="container">
+    <div class="projects-head">
+      <div class="projects-head-left">
+        <span class="tag reveal" data-en="Portfolio" data-ru="Портфолио">Portfolio</span>
+        <h2 class="section-title reveal reveal-delay-1" style="margin-top:16px">
+          <span data-en="Brands I've" data-ru="Бренды,">Brands I've</span><br>
+          <em data-en="helped grow." data-ru="которым я помог расти.">helped grow.</em>
+        </h2>
+      </div>
+      <p class="reveal reveal-delay-2" style="max-width:280px;color:var(--muted);font-size:.9rem;align-self:flex-end"
+         data-en="Hover to pause the carousel. Every project tells a growth story."
+         data-ru="Наведите для паузы. Каждый проект — история роста.">
+        Hover to pause the carousel. Every project tells a growth story.
+      </p>
+    </div>
+  </div>
+
+  <!-- Marquee (outside container for full-width) -->
+  <div class="marquee-wrap" style="padding: 0 0 8px;">
+    <div class="marquee-track" id="marqueeTrack">
+
+     <!-- Card 1 -->
+<div class="project-card proj-1">
+  <div class="project-body">
+    <div class="project-tag" data-en="Hospitality · Resort" data-ru="Гостиничный бизнес">Hospitality · Resort</div>
+    <div class="project-num">01</div>
+    <div class="project-name">Panorama Kakheti Resort</div>
+    <p class="project-desc"
+       data-en="Digital marketing for a resort hotel in Kakheti. 600+ booking inquiries per month, 10,000+ followers, 10M+ reach."
+       data-ru="Digital-маркетинг для курортного отеля в Кахетии. 600+ заявок на бронирование в месяц, 10 000+ подписчиков, 10+ млн охватов.">
+      Digital marketing for a resort hotel in Kakheti. 600+ booking inquiries per month, 10,000+ followers, 10M+ reach.
+    </p>
+    <div class="project-footer">
+      <span class="project-result" data-en="↑ Bookings +240%" data-ru="↑ Бронирований +240%">↑ Bookings +240%</span>
+      <div class="project-arrow">→</div>
+    </div>
+  </div>
+</div>
+
+<!-- Card 2 -->
+<div class="project-card proj-2">
+  <div class="project-body">
+    <div class="project-tag" data-en="Coffee Brand" data-ru="Кофейный бренд">Coffee Brand</div>
+    <div class="project-num">02</div>
+    <div class="project-name">Lui Coffee</div>
+    <p class="project-desc"
+       data-en="Content and advertising campaigns for a coffee shop in central Tbilisi. 15M+ reach, 5,000+ followers, strong brand awareness growth."
+       data-ru="Контент и рекламные кампании для кофейни в центре Тбилиси. 15+ млн охватов, 5 000+ подписчиков, рост узнаваемости бренда.">
+      Content and advertising campaigns for a coffee shop in central Tbilisi. 15M+ reach, 5,000+ followers, strong brand awareness growth.
+    </p>
+    <div class="project-footer">
+      <span class="project-result" data-en="↑ Followers ×3" data-ru="↑ Подписчики ×3">↑ Followers ×3</span>
+      <div class="project-arrow">→</div>
+    </div>
+  </div>
+</div>
+
+<!-- Card 3 -->
+<div class="project-card proj-3">
+  <div class="project-body">
+    <div class="project-tag" data-en="Restaurant" data-ru="Ресторан">Restaurant</div>
+    <div class="project-num">03</div>
+    <div class="project-name">Coffeeshop Company Georgia</div>
+    <p class="project-desc"
+       data-en="Campaigns for a coffee chain in Tbilisi focused on delivery through Wolt and Glovo. 10,000+ delivery clicks per month ($0.03–0.04 CPC), 3,000+ followers, 10M+ reach."
+       data-ru="Кампании для сети кофеен в Тбилиси с фокусом на доставку через Wolt и Glovo. 10 000+ кликов на доставку в месяц ($0.03–0.04 CPC), 3 000+ подписчиков, 10+ млн охватов.">
+      Campaigns for a coffee chain in Tbilisi focused on delivery through Wolt and Glovo. 10,000+ delivery clicks per month ($0.03–0.04 CPC), 3,000+ followers, 10M+ reach.
+    </p>
+    <div class="project-footer">
+      <span class="project-result" data-en="↑ Sales +125%" data-ru="↑ Продажи +125%">↑ Sales +125%</span>
+      <div class="project-arrow">→</div>
+    </div>
+  </div>
+</div>
+
+<!-- Card 4 -->
+<div class="project-card proj-4">
+  <div class="project-body">
+    <div class="project-tag" data-en="Healthcare · Medical" data-ru="Медицина">Healthcare · Medical</div>
+    <div class="project-num">04</div>
+    <div class="project-name">Silk Medical Tbilisi</div>
+    <p class="project-desc"
+       data-en="Marketing and lead generation for a medical clinic network. 3,000+ inquiries, 5M+ reach, 3,000+ followers."
+       data-ru="Маркетинг и лидогенерация для сети медицинских клиник. 3 000+ заявок, 5+ млн охватов, 3 000+ подписчиков.">
+      Marketing and lead generation for a medical clinic network. 3,000+ inquiries, 5M+ reach, 3,000+ followers.
+    </p>
+    <div class="project-footer">
+      <span class="project-result" data-en="↑ Leads +200%" data-ru="↑ Заявки +200%">↑ Leads +200%</span>
+      <div class="project-arrow">→</div>
+    </div>
+  </div>
+</div>
+
+<!-- Card 5 -->
+<div class="project-card proj-5">
+  <div class="project-body">
+    <div class="project-tag" data-en="Restaurant" data-ru="Ресторан">Restaurant</div>
+    <div class="project-num">05</div>
+    <div class="project-name">Shahruza</div>
+    <p class="project-desc"
+       data-en="Digital campaigns for a restaurant focused on online delivery. 5M+ reach, 3,000+ followers, +150% delivery growth via Wolt and Glovo."
+       data-ru="Digital-кампании для ресторана с фокусом на онлайн-доставку. 5+ млн охватов, 3 000+ подписчиков, +150% рост доставок через Wolt и Glovo.">
+      Digital campaigns for a restaurant focused on online delivery. 5M+ reach, 3,000+ followers, +150% delivery growth via Wolt and Glovo.
+    </p>
+    <div class="project-footer">
+      <span class="project-result" data-en="↑ Online Sales +160%" data-ru="↑ Продажи +160%">↑ Online Sales +160%</span>
+      <div class="project-arrow">→</div>
+    </div>
+  </div>
+</div>
+
+      <!-- Card 6 -->
+      <!-- <div class="project-card">
+        <div class="project-img proj-6">
+          <div class="project-img-inner">🎓</div>
+        </div>
+        <div class="project-body">
+          <div class="project-tag" data-en="Education · B2C" data-ru="Образование · B2C">Education · B2C</div>
+          <div class="project-name">Probarista</div>
+          <p class="project-desc"
+             data-en="Student acquisition campaigns and brand positioning for a professional barista school — building community and converting followers into students."
+             data-ru="Кампании по привлечению студентов и позиционирование для школы бариста — сообщество и конверсия подписчиков.">
+            Student acquisition campaigns for a barista school — building community and converting followers into enrollments.
+          </p>
+          <div class="project-footer">
+            <span class="project-result" data-en="↑ Enrollments +120%" data-ru="↑ Запись +120%">↑ Enrollments +120%</span>
+            <div class="project-arrow">→</div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- ── Duplicate for seamless loop ── -->
+     <!-- ── Duplicate for seamless loop ── -->
+<div class="project-card proj-1">
+  <div class="project-body">
+    <div class="project-tag" data-en="Hospitality · Resort" data-ru="Гостиничный бизнес">Hospitality · Resort</div>
+    <div class="project-num">01</div>
+    <div class="project-name">Panorama Kakheti Resort</div>
+    <p class="project-desc"
+       data-en="Digital marketing for a resort hotel in Kakheti. 600+ booking inquiries per month, 10,000+ followers, 10M+ reach."
+       data-ru="Digital-маркетинг для курортного отеля в Кахетии. 600+ заявок на бронирование в месяц, 10 000+ подписчиков, 10+ млн охватов.">
+      Digital marketing for a resort hotel in Kakheti. 600+ booking inquiries per month, 10,000+ followers, 10M+ reach.
+    </p>
+    <div class="project-footer">
+      <span class="project-result" data-en="↑ Bookings +240%" data-ru="↑ Бронирований +240%">↑ Bookings +240%</span>
+      <div class="project-arrow">→</div>
+    </div>
+  </div>
+</div>
+
+<div class="project-card proj-2">
+  <div class="project-body">
+    <div class="project-tag" data-en="Coffee Brand" data-ru="Кофейный бренд">Coffee Brand</div>
+    <div class="project-num">02</div>
+    <div class="project-name">Lui Coffee</div>
+    <p class="project-desc"
+       data-en="Content and advertising campaigns for a coffee shop in central Tbilisi. 15M+ reach, 5,000+ followers, strong brand awareness growth."
+       data-ru="Контент и рекламные кампании для кофейни в центре Тбилиси. 15+ млн охватов, 5 000+ подписчиков, рост узнаваемости бренда.">
+      Content and advertising campaigns for a coffee shop in central Tbilisi. 15M+ reach, 5,000+ followers, strong brand awareness growth.
+    </p>
+    <div class="project-footer">
+      <span class="project-result" data-en="↑ Followers ×3" data-ru="↑ Подписчики ×3">↑ Followers ×3</span>
+      <div class="project-arrow">→</div>
+    </div>
+  </div>
+</div>
+
+<div class="project-card proj-3">
+  <div class="project-body">
+    <div class="project-tag" data-en="Restaurant" data-ru="Ресторан">Restaurant</div>
+    <div class="project-num">03</div>
+    <div class="project-name">Coffeeshop Company Georgia</div>
+    <p class="project-desc"
+       data-en="Campaigns for a coffee chain in Tbilisi focused on delivery through Wolt and Glovo. 10,000+ delivery clicks per month ($0.03–0.04 CPC), 3,000+ followers, 10M+ reach."
+       data-ru="Кампании для сети кофеен в Тбилиси с фокусом на доставку через Wolt и Glovo. 10 000+ кликов на доставку в месяц ($0.03–0.04 CPC), 3 000+ подписчиков, 10+ млн охватов.">
+      Campaigns for a coffee chain in Tbilisi focused on delivery through Wolt and Glovo. 10,000+ delivery clicks per month ($0.03–0.04 CPC), 3,000+ followers, 10M+ reach.
+    </p>
+    <div class="project-footer">
+      <span class="project-result" data-en="↑ Sales +125%" data-ru="↑ Продажи +125%">↑ Sales +125%</span>
+      <div class="project-arrow">→</div>
+    </div>
+  </div>
+</div>
+
+<div class="project-card proj-4">
+  <div class="project-body">
+    <div class="project-tag" data-en="Healthcare · Medical" data-ru="Медицина">Healthcare · Medical</div>
+    <div class="project-num">04</div>
+    <div class="project-name">Silk Medical Tbilisi</div>
+    <p class="project-desc"
+       data-en="Marketing and lead generation for a medical clinic network. 3,000+ inquiries, 5M+ reach, 3,000+ followers."
+       data-ru="Маркетинг и лидогенерация для сети медицинских клиник. 3 000+ заявок, 5+ млн охватов, 3 000+ подписчиков.">
+      Marketing and lead generation for a medical clinic network. 3,000+ inquiries, 5M+ reach, 3,000+ followers.
+    </p>
+    <div class="project-footer">
+      <span class="project-result" data-en="↑ Leads +200%" data-ru="↑ Заявки +200%">↑ Leads +200%</span>
+      <div class="project-arrow">→</div>
+    </div>
+  </div>
+</div>
+
+<div class="project-card proj-5">
+  <div class="project-body">
+    <div class="project-tag" data-en="Restaurant" data-ru="Ресторан">Restaurant</div>
+    <div class="project-num">05</div>
+    <div class="project-name">Shahruza</div>
+    <p class="project-desc"
+       data-en="Digital campaigns for a restaurant focused on online delivery. 5M+ reach, 3,000+ followers, +150% delivery growth via Wolt and Glovo."
+       data-ru="Digital-кампании для ресторана с фокусом на онлайн-доставку. 5+ млн охватов, 3 000+ подписчиков, +150% рост доставок через Wolt и Glovo.">
+      Digital campaigns for a restaurant focused on online delivery. 5M+ reach, 3,000+ followers, +150% delivery growth via Wolt and Glovo.
+    </p>
+    <div class="project-footer">
+      <span class="project-result" data-en="↑ Online Sales +160%" data-ru="↑ Продажи +160%">↑ Online Sales +160%</span>
+      <div class="project-arrow">→</div>
+    </div>
+  </div>
+</div>
+      <!-- <div class="project-card">
+        <div class="project-img proj-6"><div class="project-img-inner">🎓</div></div>
+        <div class="project-body">
+          <div class="project-tag" data-en="Education · B2C" data-ru="Образование · B2C">Education · B2C</div>
+          <div class="project-name">Probarista</div>
+          <p class="project-desc" data-en="Student acquisition campaigns for a barista school — building community and converting followers into enrollments." data-ru="Кампании по привлечению студентов для школы бариста.">Student acquisition campaigns for a barista school — building community and converting followers into enrollments.</p>
+          <div class="project-footer"><span class="project-result" data-en="↑ Enrollments +120%" data-ru="↑ Запись +120%">↑ Enrollments +120%</span><div class="project-arrow">→</div></div>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TRUST / CLIENTS ═══════════ -->
+<section id="trust">
+  <div class="container">
+    <p class="trust-label" data-en="Trusted by brands across Georgia &amp; beyond" data-ru="Нам доверяют бренды Грузии и за её пределами">
+      Trusted by brands across Georgia &amp; beyond
+    </p>
+    <div class="trust-logos">
+      <div class="trust-logo">Panorama Kakheti Resort</div>
+      <div class="trust-logo">Lui Coffee</div>
+      <div class="trust-logo">Coffeeshop Company Georgia</div>
+      <div class="trust-logo">Silk Medical</div>
+      <div class="trust-logo">Shahruza</div>
+      <div class="trust-logo">Beko Georgia</div>
+      <div class="trust-logo">+ 15 more</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ RESULTS ═══════════ -->
+<section id="results">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:60px">
+      <span class="tag reveal" data-en="By the Numbers" data-ru="В цифрах">By the Numbers</span>
+      <h2 class="section-title reveal reveal-delay-1" style="margin-top:16px">
+        <span data-en="Results that" data-ru="Результаты,">Results that</span>
+        <em data-en=" speak." data-ru=" которые говорят."> speak.</em>
+      </h2>
+    </div>
+    <div class="results-grid reveal">
+      <div class="result-item">
+        <div class="result-num">20+</div>
+        <div class="result-desc" data-en="Completed Projects" data-ru="Завершённых проектов">Completed Projects</div>
+      </div>
+      <div class="result-item">
+        <div class="result-num">3×</div>
+        <div class="result-desc" data-en="Average Sales Growth" data-ru="Средний рост продаж">Average Sales Growth</div>
+      </div>
+      <div class="result-item">
+        <div class="result-num">200%</div>
+        <div class="result-desc" data-en="Max Lead Increase" data-ru="Макс. рост заявок">Max Lead Increase</div>
+      </div>
+      <div class="result-item">
+        <div class="result-num">5+</div>
+        <div class="result-desc" data-en="Industries Served" data-ru="Сферы деятельности">Industries Served</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-centered">
+      <span class="tag reveal" data-en="Get In Touch" data-ru="Связаться">Get In Touch</span>
+      <h2 class="section-title reveal reveal-delay-1" style="margin-top:16px">
+        <span data-en="Ready to" data-ru="Готовы">Ready to</span><br>
+        <em data-en="grow your business?" data-ru="развивать бизнес?">grow your business?</em>
+      </h2>
+      <p class="reveal reveal-delay-2"
+         data-en="Let's discuss your project and find the best strategy to drive real results. Reach out via any channel — I respond fast."
+         data-ru="Обсудим ваш проект и найдём лучшую стратегию для реальных результатов. Напишите в любой канал — отвечаю быстро.">
+        Let's discuss your project and find the best strategy to drive real results. Reach out via any channel — I respond fast.
+      </p>
+      <div class="contact-links reveal reveal-delay-3">
+
+<a href="https://wa.me/558314151" target="_blank" class="contact-link">
+<div class="contact-link-icon">
+<i class="fa-brands fa-whatsapp"></i>
+</div>
+<span class="contact-link-platform">WhatsApp</span>
+</a>
+
+<a href="https://instagram.com/oceanstwelvee" target="_blank" class="contact-link">
+<div class="contact-link-icon">
+<i class="fa-brands fa-instagram"></i>
+</div>
+<span class="contact-link-platform">Instagram</span>
+</a>
+
+<a href="https://t.me/oceanstwelve" target="_blank" class="contact-link">
+<div class="contact-link-icon">
+<i class="fa-brands fa-telegram"></i>
+</div>
+<span class="contact-link-platform">Telegram</span>
+</a>
+
+<a href="https://www.linkedin.com/in/tamerlanqarayev/" target="_blank" class="contact-link">
+<div class="contact-link-icon">
+<i class="fa-brands fa-linkedin"></i>
+</div>
+<span class="contact-link-platform">LinkedIn</span>
+</a>
+
+</div>
+  </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <!-- <div class="logo-icon" style="width:26px;height:26px;font-size:11px">🌊</div> -->
+           <div class="logo-icon">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+    <!-- Хвост акулы — две лопасти -->
+    <path d="M20 16 L4 6 L12 16 L4 26 Z" fill="white" opacity="0.95"/>
+    <!-- Тело уходящее вправо -->
+    <path d="M12 16 Q18 13 28 14 Q30 16 28 18 Q18 19 12 16 Z" fill="white" opacity="0.85"/>
+    <!-- Разрез хвоста -->
+    <path d="M4 6 L12 16 L4 26" fill="none" stroke="rgba(0,200,232,0.6)" stroke-width="1" stroke-linecap="round"/>
+  </svg>
+</div>
+          <span style="font-family:var(--font-ui);font-weight:800;font-size:.95rem">OceanicNext</span>
+        </div>
+        <p class="footer-copy">
+          <span data-en="© 2026 OceanicNext. All rights reserved." data-ru="© 2026 OceanicNext. Все права защищены.">© 2026 OceanicNext. All rights reserved.</span>
+        </p>
+      </div>
+      <!-- <div class="footer-socials">
+        <a href="https://wa.me/558314151"                          target="_blank" class="footer-social" title="WhatsApp">💬</a>
+        <a href="https://instagram.com/oceanstwelvee"              target="_blank" class="footer-social" title="Instagram">📸</a>
+        <a href="https://t.me/oceanstwelve"                        target="_blank" class="footer-social" title="Telegram">✈️</a>
+        <a href="https://www.linkedin.com/in/tamerlanqarayev/"     target="_blank" class="footer-social" title="LinkedIn">💼</a>
+      </div> -->
+   <div class="footer-socials">
+  <a href="https://wa.me/558314151"                        target="_blank" class="footer-social" title="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <a href="https://instagram.com/oceanstwelvee"            target="_blank" class="footer-social" title="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="https://t.me/oceanstwelve"                      target="_blank" class="footer-social" title="Telegram">
+    <i class="fa-brands fa-telegram"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/tamerlanqarayev/"   target="_blank" class="footer-social" title="LinkedIn">
+    <i class="fa-brands fa-linkedin-in"></i>
+  </a>
+</div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════ JAVASCRIPT ═══════════ -->
+<!-- <script>
+  /* ──────────── Language System ──────────── */
+  let currentLang = 'en';
+
+  function setLang(lang) {
+    currentLang = lang;
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+
+    // Update all [data-en] / [data-ru] elements
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const val = el.getAttribute('data-' + lang);
+      if (val !== null) el.innerHTML = val;
+    });
+
+    // Update placeholders
+    document.querySelectorAll('[data-placeholder-en]').forEach(el => {
+      el.placeholder = el.getAttribute('data-placeholder-' + lang) || el.placeholder;
+    });
+
+    // Update select options
+    document.querySelectorAll('select option[data-en]').forEach(el => {
+      el.textContent = el.getAttribute('data-' + lang) || el.textContent;
+    });
+  }
+
+  /* ──────────── Custom Cursor ──────────── */
+  const dot  = document.getElementById('cursor-dot');
+  const ring = document.getElementById('cursor-ring');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  function animCursor() {
+    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+    dot.style.transform  = `translate(${mx - 4}px, ${my - 4}px)`;
+    ring.style.transform = `translate(${rx - 18}px, ${ry - 18}px)`;
+    requestAnimationFrame(animCursor);
+  }
+  animCursor();
+
+  /* ──────────── Header scroll ──────────── */
+  const header = document.getElementById('mainHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  /* ──────────── Mobile Menu ──────────── */
+  function toggleMobile() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMobile() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  /* ──────────── Scroll Reveal ──────────── */
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  /* ──────────── Smooth anchor links ──────────── */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+
+  /* ──────────── Contact Form Submit ──────────── */
+  /* (form removed — no longer needed) */
+
+  /* ──────────── Animate stat counters ──────────── */
+  function animCount(el, target, suffix, duration = 1600) {
+    let start = null;
+    const step = ts => {
+      if (!start) start = ts;
+      const p = Math.min((ts - start) / duration, 1);
+      const val = Math.floor(p * target);
+      el.textContent = val + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  const resultsObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animCount(document.querySelectorAll('.result-num')[2], 200, '%');
+        resultsObs.disconnect();
+      }
+    });
+  }, { threshold: 0.4 });
+  const resultsSection = document.getElementById('results');
+  if (resultsSection) resultsObs.observe(resultsSection);
+</script> -->
+
+</body>
+</html>
